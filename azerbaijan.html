@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azerbaijani Flag</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/11948/11948451.png">
+
+</head>
+
+<body style="
+        margin: 0; 
+        padding: 0; 
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        background-color: black; 
+        overflow: hidden;">
+    
+    <!-- Flag container -->
+    <div id="flag" style="
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            width: 100vw; 
+            height: 50vw; 
+            background: linear-gradient(to bottom, 
+                #00B5E2 33.333%,  /* Blue stripe (top third) */
+                #EF3340 33.333% 66.666%, /* Red stripe (middle third) */
+                #509E2F 66.666%); /* Green stripe (bottom third) */">
+        
+        <!-- Content of the flag: moon and star -->
+        <div id="content" style="
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+                position: relative; 
+                width: calc(50vw * (2 / 5)); /* Width proportional to flag size */
+                height: calc(50vw * (3 / 10)); /* Height proportional to flag size */">
+            
+            <!-- Crescent moon -->
+            <div id="moon" style="
+                    height: calc(50vw * (3 / 10)); 
+                    width: calc(50vw * (3 / 10)); 
+                    background-color: white; 
+                    border-radius: 50%; /* Makes the shape circular */">
+            </div>
+            
+            <!-- Red clipping circle inside the crescent moon -->
+            <div id="moon-clip" style="
+                    position: absolute; 
+                    left: 15%; 
+                    width: calc(50vw * (1 / 4)); 
+                    height: calc(50vw * (1 / 4)); 
+                    background-color: #EF3340; /* Red color */
+                    border-radius: 50%; /* Makes the shape circular */">
+            </div>
+            
+            <!-- White star -->
+            <div id="star" style="
+                    background-color: white; 
+                    position: absolute; 
+                    left: 58.3%; 
+                    height: calc(50vw * (1 / 6)); /* Proportional star size */
+                    width: calc(50vw * (1 / 6)); /* Proportional star size */
+                    clip-path: polygon(
+                        0% 50%, 
+                        25% 40%, 
+                        15% 15%, 
+                        40% 25%, 
+                        50% 0%, 
+                        60% 25%, 
+                        85% 15%, 
+                        75% 40%, 
+                        100% 50%, 
+                        75% 60%, 
+                        85% 85%, 
+                        60% 75%, 
+                        50% 100%, 
+                        40% 75%, 
+                        15% 85%, 
+                        25% 60%); /* Creates the star shape */">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
